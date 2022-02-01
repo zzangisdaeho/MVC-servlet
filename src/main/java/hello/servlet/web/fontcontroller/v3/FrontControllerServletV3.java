@@ -26,6 +26,7 @@ public class FrontControllerServletV3 extends HttpServlet {
         controllerMap.put("/front-controller/v3/members", new MemberListControllerV3());
     }
 
+    // Model 추가 - 컨트롤러에서 HttpServlet 종속 제거
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("FrontControllerServletV3.service");

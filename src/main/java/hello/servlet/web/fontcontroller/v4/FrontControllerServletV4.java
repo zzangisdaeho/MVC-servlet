@@ -30,6 +30,7 @@ public class FrontControllerServletV4 extends HttpServlet {
         controllerMap.put("/front-controller/v4/members", new MemberListControllerV4());
     }
 
+    // 좀더 사용의 편의를 높이기 위해 Model을 직접 넘김 - 기존 ModelAndView에서 Model을 직접 넘김. 결과적으로 ModelAndView가 아닌 View값만 리턴하고 Model에 직접 데이터를 넣으면 됨. (ModelAndView의 기능을 분리하여 직접 제공)
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("FrontControllerServletV4.service");

@@ -25,6 +25,7 @@ public class FrontControllerServletV2 extends HttpServlet {
         controllerMap.put("/front-controller/v2/members", new MemberListControllerV2());
     }
 
+    //View 분리 - forward 분리, 랜더링 위임
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("FrontControllerServletV2.service");
